@@ -1,0 +1,23 @@
+\documentclass{tuftebook}
+
+\input{preamble.tex}
+\input{symbols.tex}
+
+\title{\Huge Template for Tufte-Style Note Taking}
+\author{A Prolific Writer}
+\date{\today}
+\begin{document}
+	\maketitle
+	\renewcommand{\thepage}{\roman{page}} % Use roman numerals for numbering pages	
+	%\thispagestyle{empty}
+	\input{copyright.tex}
+	\pagestyle{plain}
+	\setcounter{page}{0}
+	\tableofcontents % Insert Table of Contents
+	\cleardoublepage
+	\renewcommand{\thepage}{\arabic{page}} % Use arabic numerals for numbering pages when the main material starts
+	\setcounter{page}{1}
+	\pagestyle{normal}
+	\input{sample.tex}
+	\printbibliography
+\end{document}
